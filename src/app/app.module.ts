@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+import { ButtonModule } from './button/button.module';
+
 import { ProductcardModule } from './productcard/productcard.module';
 import { ComboboxModule } from './combobox/combobox.module';
 import { IcontooltipModule } from './icontooltip/icontooltip.module';
-
+import { MenusModule } from './menus/menus.module';
+import { DropdownmenuModule } from './dropdownmenu/dropdownmenu.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,12 @@ import { IcontooltipModule } from './icontooltip/icontooltip.module';
   ],
   imports: [
     BrowserModule,
+    ButtonModule,
     ProductcardModule,
     ComboboxModule,
-    IcontooltipModule
+    IcontooltipModule,
+    MenusModule,
+    DropdownmenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
