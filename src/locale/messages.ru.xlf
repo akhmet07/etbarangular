@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1597952085641551350" datatype="html">
+        <source>Etbar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">title</note>
+      </trans-unit>
+      <trans-unit id="2921684585789954376" datatype="html">
+        <source>доступна</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/productcard/productcard.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5909163333296654570" datatype="html">
+        <source>не доступна</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/productcard/productcard.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

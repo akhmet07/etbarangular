@@ -4,6 +4,7 @@ import { ProductcardComponent } from './productcard.component';
 import { ButtonModule } from '../button/button.module';
 import { BageModule } from '../productcard/bage/bage.module';
 import { RateModule } from '../productcard/rate/rate.module';
+import { PriceModule } from './price/price.module';
 
 
 
@@ -15,7 +16,8 @@ import { RateModule } from '../productcard/rate/rate.module';
     CommonModule,
     ButtonModule,
     BageModule,
-    RateModule
+    RateModule,
+    PriceModule
   ],
   exports: [
     ProductcardComponent
