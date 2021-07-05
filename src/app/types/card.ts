@@ -7,6 +7,7 @@ export interface Product {
     rating?: ProductRaiting;
     price?: ProductPrice;
     bage?: ProductBage;
+    ispromo?: boolean;
 }
 
 export interface ProductRaiting {

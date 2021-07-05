@@ -25,13 +25,13 @@ export const product: Product =
 export const products: Array<Product> = [
       {
         id: 1,
-        availability: true,
+        availability: false,
         company: 'Google',
         title: 'Google Pixel 1 64GB',
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKCh89zT1pTXH8a1GiEvFj3oeuktsGwc6wT9Miz7EiuKYknDGOK0-VLwbIShv2XAlVwFU&usqp=CAU',
         rating: {
-          value: 5,
+          value: 2,
           reviews: 4,
         },
         price: {
@@ -51,8 +51,8 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 2,
+          reviews: 15,
         },
         price: {
           value: 66000,
@@ -65,13 +65,13 @@ export const products: Array<Product> = [
       },
       {
         id: 3,
-        availability: true,
+        availability: false,
         company: 'Mail',
         title: 'Mail Pixel 3 64GB',
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKCh89zT1pTXH8a1GiEvFj3oeuktsGwc6wT9Miz7EiuKYknDGOK0-VLwbIShv2XAlVwFU&usqp=CAU',
         rating: {
-          value: 5,
+          value: 4,
           reviews: 4,
         },
         price: {
@@ -80,8 +80,9 @@ export const products: Array<Product> = [
         },
         bage: {
           color: 'green',
-          text: 'Быстрая доставка'
-        }
+          text: 'Акция'
+        },
+        ispromo: true
       },
       {
         id: 4,
@@ -91,8 +92,8 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 3,
+          reviews: 6,
         },
         price: {
           value: 63000,
@@ -112,7 +113,7 @@ export const products: Array<Product> = [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
           value: 5,
-          reviews: 4,
+          reviews: 1,
         },
         price: {
           value: 53000,
@@ -131,7 +132,7 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
+          value: 4,
           reviews: 4,
         },
         price: {
@@ -151,17 +152,18 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 3,
+          reviews: 7,
         },
         price: {
           value: 63000,
           discount: undefined,
         },
         bage: {
-          color: '#FFFFF',
-          text: 'Быстрая доставка'
-        }
+          color: 'green',
+          text: 'Акция'
+        },
+        ispromo: true
       },
       {
         id: 8,
@@ -171,8 +173,8 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 4,
+          reviews: 14,
         },
         price: {
           value: 63000,
@@ -191,8 +193,8 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 1,
+          reviews: 40,
         },
         price: {
           value: 53000,
@@ -211,8 +213,8 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 0,
+          reviews: 0,
         },
         price: {
           value: 66000,
@@ -232,7 +234,7 @@ export const products: Array<Product> = [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
           value: 5,
-          reviews: 4,
+          reviews: 1,
         },
         price: {
           value: 63000,
@@ -251,16 +253,17 @@ export const products: Array<Product> = [
         image:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWB9ciNukWc9x8HsuGVPEzS-G5ySok9XMxT03Y-R0FJTwf5tZavNXZ8VcvrIETbPlLOL8&usqp=CAU',
         rating: {
-          value: 5,
-          reviews: 4,
+          value: 3,
+          reviews: 8,
         },
         price: {
           value: 63000,
-          discount: 0.2,
+          discount: undefined,
         },
         bage: {
-          color: '#FF3366',
-          text: 'Скидка'
-        }
+          color: 'green',
+          text: 'Акция'
+        },
+        ispromo: true
       }
     ]

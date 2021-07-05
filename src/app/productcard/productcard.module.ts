@@ -7,7 +7,6 @@ import { RateModule } from '../productcard/rate/rate.module';
 import { PriceModule } from './price/price.module';
 
 
-
 @NgModule({
   declarations: [
     ProductcardComponent

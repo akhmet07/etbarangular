@@ -13,7 +13,7 @@ import { Component, Input, OnInit } from '@angular/core';
     } 
     .active { background-color: red; } 
     .primary { color: #AB274F; } 
-    .accent { color: #9966CC; }
+    .accent { color: #F96699; }
     .success { color: #7FFFD4; }
     .warning { color: #FF2400; }
     .large { font-size: 16px; }

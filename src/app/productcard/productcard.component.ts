@@ -1,5 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { product } from '../data/product.data';
+import { Component, Input, OnChanges, OnInit, EventEmitter, Output } from '@angular/core';
 import { Product } from '../types/card';
 
 @Component({
@@ -18,7 +17,7 @@ import { Product } from '../types/card';
           <span class="productcard__reviews">{{product?.rating?.reviews}} отзыва</span>
         </div>
         <app-price [price] = "product?.price"></app-price>
-        <div>Доставка {{availability}}</div>
+        <div>{{availability}}</div>
         <div class="productcard_actions">
           <!-- <app-button-icon></app-button-icon> -->
           <app-button text="В корзину" [isActive]="isFavorite" (click)="toggleFavorite()"></app-button>
@@ -39,7 +38,11 @@ import { Product } from '../types/card';
 })
 export class ProductcardComponent implements OnInit, OnChanges {
 
-  @Input() product?: Product = product;
+  @Input() product?: Product;
+
+  @Output() addProduct = new EventEmitter<any>();
+
+  @Output() clearAll = new EventEmitter<any>();
 
   isFavorite = false;
 
@@ -49,7 +52,7 @@ export class ProductcardComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    if (product) {
+    if (this.product) {
       this.isFavorite = false;
     }
   }
@@ -60,5 +63,7 @@ export class ProductcardComponent implements OnInit, OnChanges {
 
   toggleFavorite() {
     this.isFavorite = !this.isFavorite;
+    //console.log(this.product);
+    this.addProduct.emit(this.product);
   }
 }
