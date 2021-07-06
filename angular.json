@@ -19,10 +19,24 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": {
+              "translation": "src/locale/messages.ru.xlf",
+              "baseHref": "/ru/"
+            },
+          "en": {
+              "translation": "src/locale/messages.en.xlf",
+              "baseHref": "/en/"
+            }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/etbar",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -59,7 +73,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "localize": ["ru", "en"]
             },
             "development": {
               "buildOptimizer": false,
@@ -67,7 +82,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": ["ru"]
             }
           },
           "defaultConfiguration": "production"

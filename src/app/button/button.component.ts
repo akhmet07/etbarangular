@@ -1,4 +1,3 @@
-import { unescapeIdentifier } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,16 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
       <button class="{{newcolor}} {{newfontsize}}" [class.active]=isActive [disabled]="isCheckDisable()">{{text}}</button>
     </p>
   `,
-  styles: [`button {all: unset; cursor: pointer; border: 1px solid #c6cacc; 
-    font: 600 14px/20px Inter, sans-serif; padding: 7px 16px; border-radius: 2px; text-align: center; display: block; 
-    &:hover {border:1px solid #1a73ef; background-color: #1a73ef;}} 
-    .active{background-color: red} 
-    .primary{color: #AB274F;} 
-    .accent{color: #9966CC;}
-    .success{color: #7FFFD4;}
-    .warning{color: #FF2400;}
-    .large{font-size: 16px}
-    .small{font-size: 12px}`
+  styles: [`
+    button {all: unset; cursor: pointer; border: 1px solid #c6cacc; font: 600 14px/20px Inter, sans-serif; padding: 7px 16px; 
+      border-radius: 2px; text-align: center; display: block; &:hover {border:1px solid #1a73ef; background-color: #1a73ef;}
+    } 
+    .active { background-color: red; } 
+    .primary { color: #AB274F; } 
+    .accent { color: #F96699; }
+    .success { color: #7FFFD4; }
+    .warning { color: #FF2400; }
+    .large { font-size: 16px; }
+    .small { font-size: 12px; }`
   ]
 })
 export class ButtonComponent implements OnInit {

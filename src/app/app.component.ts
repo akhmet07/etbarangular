@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { registerLocaleData } from '@angular/common';
+import localeRu from '@angular/common/locales/ru';
+registerLocaleData(localeRu, 'ru');
 
 @Component({
   selector: 'app-root',
@@ -7,10 +10,12 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'etbar';
-  inCard = 0;
   apiUrl = `${environment.api}`;
 
+  title = 'etbar';
+  i = 0;
+  inCard = 0;
+  
   addToCard() {
     this.inCard += 1;
   }
@@ -18,4 +23,10 @@ export class AppComponent {
   removeFromCard() {
     return this.inCard > 0 ? this.inCard -= 1 : this.inCard
   }
+
+  // next() {
+  //   console.log('next')
+  //   this.i = this.i < products.length -1 ? this.i+1 : 0;
+  //   this.product = products[this.i];
+  // }
 }

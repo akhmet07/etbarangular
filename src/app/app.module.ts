@@ -10,6 +10,8 @@ import { ComboboxModule } from './combobox/combobox.module';
 import { IcontooltipModule } from './icontooltip/icontooltip.module';
 import { MenusModule } from './menus/menus.module';
 import { DropdownmenuModule } from './dropdownmenu/dropdownmenu.module';
+import { CatalogModule } from './catalog/catalog.module';
+import { CustomCurrencyPipe } from './custom-currency.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { DropdownmenuModule } from './dropdownmenu/dropdownmenu.module';
     ComboboxModule,
     IcontooltipModule,
     MenusModule,
-    DropdownmenuModule
+    DropdownmenuModule,
+    CatalogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
