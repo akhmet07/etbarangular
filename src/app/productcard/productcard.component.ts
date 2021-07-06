@@ -42,8 +42,6 @@ export class ProductcardComponent implements OnInit, OnChanges {
 
   @Output() addProduct = new EventEmitter<any>();
 
-  @Output() clearAll = new EventEmitter<any>();
-
   isFavorite = false;
 
   constructor() { }
