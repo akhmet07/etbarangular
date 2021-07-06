@@ -48,14 +48,14 @@ export class CatalogComponent implements OnInit {
 
   onAddProduct($event: any): void {
     const c = this.inCard.filter(x => x.product === $event).length?? 0;
-    console.log("onAddProdduct: " + c);
+    //console.log("onAddProdduct: " + c);
 
     if (c === 0) {
       this.inCard.push({count: 1, product: $event})
     } else {
       const p = this.inCard.find(x => x.product === $event);
       if (p) p.count =  p.count + 1;
-      console.log("onAddProdduct: " + p);  
+      //console.log("onAddProdduct: " + p);  
       this.onRemoveProduct($event);
     }
 

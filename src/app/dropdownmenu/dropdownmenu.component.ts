@@ -7,16 +7,16 @@ export type menuTriggerTypes = 'click' | 'hover';
   template: `
     <div class="dropdown">
 	    <div>
-        <div class="dropdown__bage">{{inCard.length}}</div>
+        <div class="dropdown__bage" *ngIf='inCard.length !== 0'>{{inCard.length}}</div>
         <app-button [text]=text [isActive]=isOpen color="accent" [isDisable]=isDisabled (click)="changeOpenedState()">
         </app-button>
       </div>
       <div class="menu-wrapper" *ngIf="isOpen">
         <!-- <app-menu></app-menu> -->
         <div class="menu__header">
-          Общая стоимость {{amount | number}} тенге, со скидкой {{discount | number}}
+          Общая стоимость {{amount | number}} тенге, со скидкой {{discount | percent}}
         </div>
-        <div style="margin-left: auto; cursor: pointer;" (click)="changeOpenedState()">
+        <div class="menu__icon" (click)="changeOpenedState()">
           <span class="material-icons app-icon">close</span>
         </div>
         <div class="menu__data">
@@ -28,7 +28,7 @@ export type menuTriggerTypes = 'click' | 'hover';
               <div>{{item.product.company}}</div>
               <div>{{item.product.title}}</div>
             </div>
-            <div (click)="remove(item.product)">
+            <div class="menu__icon" (click)="remove(item.product)">
               <span class="material-icons app-icon">remove</span>
             </div>
           </div>
@@ -40,8 +40,23 @@ export type menuTriggerTypes = 'click' | 'hover';
       </div>
     </div>
   `,
-  styles: [`.menu__data__item{ display: flex; padding: 14px 10px;}; .menu__actions{display: flex;}
-          `
+  styles: [`.menu__data__item{ display: flex; padding: 14px 10px; } .menu__actions{display: flex;}
+  .menu__icon{margin-left: auto; cursor: pointer;}
+  .dropdown__bage {
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 70px;
+    background: #f55123;
+    padding: 2px 3px 1px;
+    border-radius: 16px;
+  }`
   ]
 })
 
@@ -71,7 +86,7 @@ export class DropdownmenuComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     //console.log(changes);
     const { inCard } = changes;
-    console.log(inCard);
+    //console.log(inCard);
     this.isDisabled = inCard.currentValue.length === 0;
     
     if (inCard && inCard.currentValue && inCard.currentValue.length > 0) {
